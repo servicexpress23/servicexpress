@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38bef7209bce40f4882192747848fede" Name="Diagram1">
+        <EntityTypeShape EntityType="UrbanModel.AppointmentDetail" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UrbanModel.Booking" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UrbanModel.Mst_Category" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UrbanModel.Mst_LoginDetails" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="UrbanModel.Mst_ProviderDetails" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="UrbanModel.Mst_ProviderSignin" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="UrbanModel.Mst_Services" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UrbanModel.Mst_UserSignin" Width="1.5" PointX="6.75" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

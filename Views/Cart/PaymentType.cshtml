@@ -1,0 +1,238 @@
+﻿
+@{
+    ViewBag.Title = "PaymentType";
+}
+
+@{ 
+    var data = ViewBag.AppDtls;
+}
+
+<div class="main-wrapper">
+    <div class="bg-img">
+        <img src="~/assets/img/bg/work-bg-03.png" alt="img" class="bgimg1">
+        <img src="~/assets/img/bg/work-bg-03.png" alt="img" class="bgimg2">
+        <img src="~/assets/img/bg/feature-bg-03.png" alt="img" class="bgimg3">
+    </div>
+
+    <div class="content book-content">
+        <div class="container">
+            <div class="row">
+
+                <!-- Booking -->
+                <div class="col-lg-10 mx-auto">
+
+                    <!-- Booking Step -->
+                    <ul class="step-register row">
+                        <li class="activate col-md-4">
+                            <div class="multi-step-icon">
+                                <span><img src="~/assets/img/icons/calendar-icon.svg" alt="img"></span>
+                            </div>
+                            <div class="multi-step-info">
+                                <h6>Appointment</h6>
+                                <p>Choose time & date for the service</p>
+                            </div>
+                        </li>
+                        <li class="active col-md-4">
+                            <div class="multi-step-icon">
+                                <span><img src="~/assets/img/icons/wallet-icon.svg" alt="img"></span>
+                            </div>
+                            <div class="multi-step-info">
+                                <h6>Payment</h6>
+                                <p>Select Payment Gateway</p>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <div class="multi-step-icon">
+                                <span><img src="~/assets/img/icons/book-done.svg" alt="img"></span>
+                            </div>
+                            <div class="multi-step-info">
+                                <h6>Done </h6>
+                                <p>Completion of Booking</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- /Booking Step -->
+                    <!-- Booking Payment -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5 class="pay-title">Payment Methods</h5>
+                            <div class="payment-card payment-bg">
+                                <div class="payment-head">
+                                    <div class="payment-title">
+                                        <label class="custom_radio">
+                                            <input type="radio" name="payment" class="card-payment" disabled>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <h6>Wallet</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-card">
+                                <div class="payment-head">
+                                    <div class="payment-title">
+                                        <label class="custom_radio">
+                                            <input type="radio" name="payment" class="card-payment"checked="">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <h6>Cash On Delivery</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-card">
+                                <div class="payment-head">
+                                    <div class="payment-title">
+                                        <label class="custom_radio credit-card-option">
+                                            <input type="radio" name="payment" class="card-payment" disabled>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <h6>Credit / Debit Card</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-list" style="display:none">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Name on Card</label>
+                                            <input class="form-control" type="text" placeholder="Enter Name on Card">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Card Number</label>
+                                            <input class="form-control" placeholder="**** **** **** ****" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <div class="form-group">
+                                            <label class="col-form-label">&nbsp;</label>
+                                            <img src="~/assets/img/payment-card.png" class="img-fluid" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Expiration date</label>
+                                            <input class="form-control" placeholder="MM/YY" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Security code</label>
+                                            <input class="form-control" placeholder="CVV" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="pay-title">Booking Summary</h5>
+                            <div class="summary-box">
+                                <div class="booking-info">
+                                    <div class="service-book">
+                                        <div class="service-book-img">
+                                            <img src="~/assets/img/booking.jpg" alt="img">
+                                        </div>
+                                        <div class="serv-profile">
+                                            <span class="badge">Car Wash</span>
+                                            <h2 id="service">Car Repair Services</h2>
+                                            <ul>
+                                                <li class="serv-pro">
+                                                    <img src="~/assets/img/profiles/avatar-01.jpg" alt="img">
+                                                </li>
+                                                <li class="serv-review"><i class="fa-solid fa-star"></i> <span>4.9 </span>(255 reviews)</li>
+                                                <li class="service-map"><i class="feather-map-pin"></i> Alabama, USA</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="booking-summary">
+                                    <ul class="booking-date">
+                                        <li>Date <span id="date">@ViewBag.AppDtls.AppDate</span></li>
+                                        <li>Time <span id="time">@ViewBag.AppDtls.AppTime</span></li>
+                                        <li>Service Provider <span id="">@ViewBag.AppDtls.ProviderName</span></li>
+                                        <li>Service Provider <span id="provider" hidden>@ViewBag.AppDtls.ProviderId</span></li>
+                                    </ul>
+                                    <ul class="booking-date">
+                                        <li>Subtotal <span>&#x20B9 <span id="Price">@ViewBag.AppDtls.Price</span></span></li>
+                                        <li>Coupoun Discount <span>&#x20B9 <span id="coupon">5.00</span></span></li>
+                                        <li>Services Charges <span>&#x20B9 <span id="SCharges">3.00</span></span></li>
+                                    </ul>
+                                    <div class="booking-total">
+                                        <ul class="booking-total-list">
+                                            <li>
+                                                <span>Total</span>
+                                                <span class="total-cost">&#x20B9 <span id="total"> @ViewBag.AppDtls.Price </span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking-coupon">
+                                <div class="form-group w-100">
+                                    <div class="coupon-icon">
+                                        <input type="text" class="form-control" placeholder="Coupon Code">
+                                        <span><img src="~/assets/img/icons/coupon-icon.svg" alt="image"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary apply-btn">Apply</button>
+                                </div>
+                            </div>
+                            <div class="save-offer">
+                                <p><i class="fa-solid fa-circle-check"></i> Your total saving on this order $5.00</p>
+                            </div>
+                            <div class="booking-pay">
+                                <a href="javascript:void(0)" class="btn btn-primary btn-pay w-100" onclick="Book()">Pay To Provider</a>
+                                <a href="javascript:void(0);" class="btn btn-secondary btn-skip">Skip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Booking Payment -->
+
+                </div>
+                <!-- /Booking -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- /Cursor -->
+
+</div>
+<script src="~/assets/js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+    function Book() {
+        model = {
+            Service: $('#service').text(),
+            Provider:$('#provider').text(),
+            date: $('#date').text(),
+            time: $('#time').text(),
+            mode:"COP",
+            Total: $('#total').text(),
+            Status:"Pending"
+        }
+        console.log(model);
+        $.ajax({
+            type: "POST",
+            url: "/Cart/book",
+            data: JSON.stringify({Model:model}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                alert(result.d);
+                console.log(result);
+                window.open(result, "_self")
+            },
+            Error: function (errormsg) {
+
+            }
+        });
+    }
+
+</script>

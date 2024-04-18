@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "ProviderSignUp";
+}
+
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 mx-auto">
+                <div class="login-wrap">
+                    <div class="login-header">
+                        <h3>Provider Signup</h3>
+                    </div>
+
+                    <!-- Signup Form -->
+                    @using (Html.BeginForm("ProviderSignUp", "Account", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <label class="col-form-label">Name</label>
+                            <input type="text"  class="form-control" name="PName" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Email</label>
+                            <input type="email" class="form-control" name="Email" placeholder="johndoe@example.com">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="col-form-label">Phone Number</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg group_formcontrol"
+                                           id="phone" name="Phone" placeholder="(256) 789-6253">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label d-block">
+                                Password<span class="brief-bio float-end">
+                                    Must
+                                    be 8 Characters at Least
+                                </span>
+                            </label>
+                            <div class="pass-group">
+                                <input type="password" name="Password" class="form-control pass-input"
+                                       placeholder="*************">
+                                <span class="toggle-password feather-eye-off"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 login-btn">Signup</button>
+                        <div class="login-or">
+                            <span class="or-line"></span>
+                            <span class="span-or">Or, log in with your email</span>
+                        </div>
+                        <div class="social-login">
+                            <a href="#" class="btn btn-google w-100"><img src="~/assets/img/icons/google.svg" class="me-2" alt="img">Log in with Google</a>
+                            <a href="#" class="btn btn-google w-100"><img src="~/assets/img/icons/fb.svg" class="me-2" alt="img">Log in with Facebook</a>
+                        </div>
+                        <p class="no-acc">Already have an account ? <a href="login.html"> Sign In</a></p>
+                    }
+                        <!-- /Signup Form -->
+
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>
